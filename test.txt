@@ -1,0 +1,93 @@
+2022-08-08 16:10:46.026+0000 [id=22]	SEVERE	hudson.util.BootFailure#publish: Failed to initialize Jenkins
+2022-08-08T16:10:46.046541536Z io.jenkins.plugins.casc.ConfiguratorException: Invalid configuration elements for type class com.nirima.jenkins.plugins.docker.DockerTemplateBase : cpuQuota,environment,cpuPeriod,mounts,mountsString.
+2022-08-08T16:10:46.046551259Z Available attributes : bindAllPorts, bindPorts, cpuShares, dnsString, dockerCommand, environmentsString, extraHosts, extraHostsString, hostname, image, macAddress, memoryLimit, memorySwap, network, privileged, pullCredentialsId, tty, volumes, volumesFrom2, volumesFromString, volumesString
+2022-08-08T16:10:46.046553252Z 	at io.jenkins.plugins.casc.BaseConfigurator.handleUnknown(BaseConfigurator.java:375)
+2022-08-08T16:10:46.046555103Z 	at io.jenkins.plugins.casc.BaseConfigurator.configure(BaseConfigurator.java:364)
+2022-08-08T16:10:46.046556684Z 	at io.jenkins.plugins.casc.BaseConfigurator.configure(BaseConfigurator.java:275)
+2022-08-08T16:10:46.046558259Z 	at io.jenkins.plugins.casc.impl.configurators.DataBoundConfigurator.configure(DataBoundConfigurator.java:82)
+2022-08-08T16:10:46.046559757Z 	at io.jenkins.plugins.casc.impl.configurators.DataBoundConfigurator.tryConstructor(DataBoundConfigurator.java:159)
+2022-08-08T16:10:46.046561236Z 	at io.jenkins.plugins.casc.impl.configurators.DataBoundConfigurator.instance(DataBoundConfigurator.java:76)
+2022-08-08T16:10:46.046562706Z 	at io.jenkins.plugins.casc.BaseConfigurator.configure(BaseConfigurator.java:266)
+2022-08-08T16:10:46.046564138Z 	at io.jenkins.plugins.casc.impl.configurators.DataBoundConfigurator.configure(DataBoundConfigurator.java:82)
+2022-08-08T16:10:46.046565622Z 	at io.jenkins.plugins.casc.impl.configurators.DataBoundConfigurator.tryConstructor(DataBoundConfigurator.java:151)
+2022-08-08T16:10:46.046567075Z 	at io.jenkins.plugins.casc.impl.configurators.DataBoundConfigurator.instance(DataBoundConfigurator.java:76)
+2022-08-08T16:10:46.046568538Z 	at io.jenkins.plugins.casc.BaseConfigurator.configure(BaseConfigurator.java:266)
+2022-08-08T16:10:46.046570014Z 	at io.jenkins.plugins.casc.impl.configurators.DataBoundConfigurator.configure(DataBoundConfigurator.java:82)
+2022-08-08T16:10:46.046571498Z 	at io.jenkins.plugins.casc.impl.configurators.HeteroDescribableConfigurator.lambda$doConfigure$16668e2$1(HeteroDescribableConfigurator.java:277)
+2022-08-08T16:10:46.046573009Z 	at io.vavr.CheckedFunction0.lambda$unchecked$52349c75$1(CheckedFunction0.java:247)
+2022-08-08T16:10:46.046575433Z 	at io.jenkins.plugins.casc.impl.configurators.HeteroDescribableConfigurator.doConfigure(HeteroDescribableConfigurator.java:277)
+2022-08-08T16:10:46.046576958Z 	at io.jenkins.plugins.casc.impl.configurators.HeteroDescribableConfigurator.lambda$configure$2(HeteroDescribableConfigurator.java:86)
+2022-08-08T16:10:46.046578469Z 	at io.vavr.control.Option.map(Option.java:392)
+2022-08-08T16:10:46.046579884Z 	at io.jenkins.plugins.casc.impl.configurators.HeteroDescribableConfigurator.lambda$configure$3(HeteroDescribableConfigurator.java:86)
+2022-08-08T16:10:46.046581389Z 	at io.vavr.Tuple2.apply(Tuple2.java:238)
+2022-08-08T16:10:46.046582854Z 	at io.jenkins.plugins.casc.impl.configurators.HeteroDescribableConfigurator.configure(HeteroDescribableConfigurator.java:83)
+2022-08-08T16:10:46.046584345Z 	at io.jenkins.plugins.casc.impl.configurators.HeteroDescribableConfigurator.check(HeteroDescribableConfigurator.java:92)
+2022-08-08T16:10:46.046587300Z 	at io.jenkins.plugins.casc.impl.configurators.HeteroDescribableConfigurator.check(HeteroDescribableConfigurator.java:55)
+2022-08-08T16:10:46.046588892Z 	at io.jenkins.plugins.casc.BaseConfigurator.configure(BaseConfigurator.java:343)
+2022-08-08T16:10:46.046590374Z 	at io.jenkins.plugins.casc.BaseConfigurator.check(BaseConfigurator.java:286)
+2022-08-08T16:10:46.046591869Z 	at io.jenkins.plugins.casc.ConfigurationAsCode.lambda$checkWith$8(ConfigurationAsCode.java:776)
+2022-08-08T16:10:46.046593343Z 	at io.jenkins.plugins.casc.ConfigurationAsCode.invokeWith(ConfigurationAsCode.java:712)
+2022-08-08T16:10:46.046594853Z Caused: io.jenkins.plugins.casc.ConfiguratorException: jenkins: error configuring 'jenkins' with class io.jenkins.plugins.casc.core.JenkinsConfigurator configurator
+2022-08-08T16:10:46.046596482Z 	at io.jenkins.plugins.casc.ConfigurationAsCode.invokeWith(ConfigurationAsCode.java:718)
+2022-08-08T16:10:46.046597956Z 	at io.jenkins.plugins.casc.ConfigurationAsCode.checkWith(ConfigurationAsCode.java:776)
+2022-08-08T16:10:46.046599430Z 	at io.jenkins.plugins.casc.ConfigurationAsCode.configureWith(ConfigurationAsCode.java:761)
+2022-08-08T16:10:46.046600958Z 	at io.jenkins.plugins.casc.ConfigurationAsCode.configureWith(ConfigurationAsCode.java:637)
+2022-08-08T16:10:46.046602423Z 	at io.jenkins.plugins.casc.ConfigurationAsCode.configure(ConfigurationAsCode.java:306)
+2022-08-08T16:10:46.046603895Z 	at io.jenkins.plugins.casc.ConfigurationAsCode.init(ConfigurationAsCode.java:298)
+2022-08-08T16:10:46.046605371Z Caused: java.lang.reflect.InvocationTargetException
+2022-08-08T16:10:46.046606788Z 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+2022-08-08T16:10:46.046608860Z 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+2022-08-08T16:10:46.046610303Z 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+2022-08-08T16:10:46.046611748Z 	at java.lang.reflect.Method.invoke(Method.java:498)
+2022-08-08T16:10:46.046613161Z 	at hudson.init.TaskMethodFinder.invoke(TaskMethodFinder.java:109)
+2022-08-08T16:10:46.046614583Z Caused: java.lang.Error
+2022-08-08T16:10:46.046615984Z 	at hudson.init.TaskMethodFinder.invoke(TaskMethodFinder.java:115)
+2022-08-08T16:10:46.046617451Z 	at hudson.init.TaskMethodFinder$TaskImpl.run(TaskMethodFinder.java:185)
+2022-08-08T16:10:46.046618860Z 	at org.jvnet.hudson.reactor.Reactor.runTask(Reactor.java:305)
+2022-08-08T16:10:46.046620330Z 	at jenkins.model.Jenkins$5.runTask(Jenkins.java:1156)
+2022-08-08T16:10:46.046621740Z 	at org.jvnet.hudson.reactor.Reactor$2.run(Reactor.java:222)
+2022-08-08T16:10:46.046623147Z 	at org.jvnet.hudson.reactor.Reactor$Node.run(Reactor.java:121)
+2022-08-08T16:10:46.046624562Z 	at jenkins.security.ImpersonatingExecutorService$1.run(ImpersonatingExecutorService.java:68)
+2022-08-08T16:10:46.046625978Z 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+2022-08-08T16:10:46.046628641Z 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+2022-08-08T16:10:46.046630078Z 	at java.lang.Thread.run(Thread.java:748)
+2022-08-08T16:10:46.046631458Z Caused: org.jvnet.hudson.reactor.ReactorException
+2022-08-08T16:10:46.046632890Z 	at org.jvnet.hudson.reactor.Reactor.execute(Reactor.java:291)
+2022-08-08T16:10:46.046634328Z 	at jenkins.InitReactorRunner.run(InitReactorRunner.java:49)
+2022-08-08T16:10:46.046635732Z 	at jenkins.model.Jenkins.executeReactor(Jenkins.java:1191)
+2022-08-08T16:10:46.046637115Z 	at jenkins.model.Jenkins.<init>(Jenkins.java:981)
+2022-08-08T16:10:46.046638626Z 	at hudson.model.Hudson.<init>(Hudson.java:86)
+2022-08-08T16:10:46.046640058Z 	at hudson.model.Hudson.<init>(Hudson.java:82)
+2022-08-08T16:10:46.046641466Z 	at hudson.WebAppMain$3.run(WebAppMain.java:247)
+2022-08-08T16:10:46.046642869Z Caused: hudson.util.HudsonFailedToLoad
+2022-08-08T16:10:46.046644301Z 	at hudson.WebAppMain$3.run(WebAppMain.java:264)
+2022-08-08T16:10:46.058474586Z 2022-08-08 16:10:46.055+0000 [id=22]	INFO	hudson.lifecycle.Lifecycle#onStatusUpdate: Stopping Jenkins
+2022-08-08T16:10:46.089349363Z 2022-08-08 16:10:46.088+0000 [id=22]	INFO	jenkins.model.Jenkins$16#onAttained: Started termination
+2022-08-08T16:10:46.117035039Z 2022-08-08 16:10:46.115+0000 [id=22]	INFO	jenkins.model.Jenkins$16#onAttained: Completed termination
+2022-08-08T16:10:46.117057650Z 2022-08-08 16:10:46.116+0000 [id=22]	INFO	jenkins.model.Jenkins#_cleanUpDisconnectComputers: Starting node disconnection
+2022-08-08T16:10:46.120788869Z 2022-08-08 16:10:46.120+0000 [id=22]	INFO	jenkins.model.Jenkins#_cleanUpShutdownPluginManager: Stopping plugin manager
+2022-08-08T16:10:46.241887936Z 2022-08-08 16:10:46.241+0000 [id=22]	INFO	jenkins.model.Jenkins#_cleanUpPersistQueue: Persisting build queue
+2022-08-08T16:10:46.252348161Z 2022-08-08 16:10:46.251+0000 [id=22]	WARNING	h.m.listeners.SaveableListener#fireOnChange
+2022-08-08T16:10:46.252367725Z java.lang.NullPointerException
+2022-08-08T16:10:46.252370035Z 	at hudson.plugins.jobConfigHistory.JobConfigHistorySaveableListener.onChange(JobConfigHistorySaveableListener.java:59)
+2022-08-08T16:10:46.252387115Z 	at hudson.model.listeners.SaveableListener.fireOnChange(SaveableListener.java:82)
+2022-08-08T16:10:46.252389133Z 	at hudson.model.Queue.save(Queue.java:477)
+2022-08-08T16:10:46.252390680Z 	at jenkins.model.Jenkins._cleanUpPersistQueue(Jenkins.java:3835)
+2022-08-08T16:10:46.252392196Z 	at jenkins.model.Jenkins.cleanUp(Jenkins.java:3590)
+2022-08-08T16:10:46.252393589Z 	at hudson.WebAppMain$3.run(WebAppMain.java:268)
+2022-08-08T16:10:46.252395002Z 2022-08-08 16:10:46.251+0000 [id=22]	INFO	jenkins.model.Jenkins#_cleanUpAwaitDisconnects: Waiting for node disconnection completion
+2022-08-08T16:10:46.254497116Z 2022-08-08 16:10:46.254+0000 [id=22]	INFO	hudson.lifecycle.Lifecycle#onStatusUpdate: Jenkins stopped
+2022-08-08T16:10:46.625970344Z 2022-08-08 16:10:46.624+0000 [id=49]	SEVERE	hudson.triggers.SafeTimerTask#run: Timer task io.fabric8.jenkins.openshiftsync.GlobalPluginConfigurationTimerTask@5a3597f7 failed
+2022-08-08T16:10:46.626000645Z java.lang.IllegalStateException: Jenkins.instance is missing. Read the documentation of Jenkins.getInstanceOrNull to see what you are doing wrong.
+2022-08-08T16:10:46.626002512Z 	at jenkins.model.Jenkins.get(Jenkins.java:808)
+2022-08-08T16:10:46.626004005Z 	at jenkins.model.Jenkins.getActiveInstance(Jenkins.java:820)
+2022-08-08T16:10:46.626005535Z 	at io.fabric8.jenkins.openshiftsync.GlobalPluginConfigurationTimerTask.doRun(GlobalPluginConfigurationTimerTask.java:25)
+2022-08-08T16:10:46.626007033Z 	at hudson.triggers.SafeTimerTask.run(SafeTimerTask.java:92)
+2022-08-08T16:10:46.626008475Z 	at jenkins.security.ImpersonatingScheduledExecutorService$1.run(ImpersonatingScheduledExecutorService.java:67)
+2022-08-08T16:10:46.626010056Z 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+2022-08-08T16:10:46.626011481Z 	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+2022-08-08T16:10:46.626012908Z 	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+2022-08-08T16:10:46.626014360Z 	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+2022-08-08T16:10:46.626015897Z 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+2022-08-08T16:10:46.626017330Z 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+2022-08-08T16:10:46.626019062Z 	at java.lang.Thread.run(Thread.java:748)
